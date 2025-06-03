@@ -9,6 +9,7 @@ documentation = "https://github.com/dessalines/invisible-characters"
 repository = "https://github.com/dessalines/invisible-characters"
 readme = "README.md"
 keywords = ["invisible", "unicode"]
+exclude = ["invisible-characters", "update.sh", "src/main.rs"]
 
 [dependencies]
 anyhow = "1.0.98"
