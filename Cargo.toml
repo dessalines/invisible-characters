@@ -1,0 +1,16 @@
+[package]
+name = "invisible-characters"
+version = "0.1.0"
+edition = "2021"
+description = "A list of invisible characters"
+license = "AGPL-3.0"
+homepage = "https://github.com/dessalines/invisible-characters"
+documentation = "https://github.com/dessalines/invisible-characters"
+repository = "https://github.com/dessalines/invisible-characters"
+readme = "README.md"
+keywords = ["invisible", "unicode"]
+
+[dependencies]
+anyhow = "1.0.98"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"

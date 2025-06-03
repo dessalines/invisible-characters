@@ -1,0 +1,6 @@
+# ide config
+.idea
+.vscode
+
+# local build files
+target

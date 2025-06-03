@@ -1,0 +1,3 @@
+[submodule "invisible-characters"]
+	path = invisible-characters
+	url = https://github.com/flopp/invisible-characters
