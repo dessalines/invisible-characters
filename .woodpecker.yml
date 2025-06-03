@@ -78,7 +78,7 @@ steps:
       CARGO_API_TOKEN:
         from_secret: dess_cargo_api_token
     commands:
-      - cargo publish --token "$CARGO_API_TOKEN"
+      - cargo publish --token "$CARGO_API_TOKEN" --allow-dirty
     when:
       - event: tag
 
