@@ -15,9 +15,9 @@ fn main() -> Result<()> {
     data.len()
   );
 
-  let output_data = format!("{import_line}\n{var_line}{:#?};", data)
+  let output_data = format!("{import_line}\n{var_line}{data:#?};")
     .replace("InvisibleCharReader", "InvisibleChar");
-  write!(file, "{}", output_data)?;
+  write!(file, "{output_data}")?;
 
   Ok(())
 }
