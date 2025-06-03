@@ -1,5 +1,6 @@
 variables:
   - &rust_nightly_image "rustlang/rust:nightly"
+  - &install_binstall "wget -O- https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-unknown-linux-musl.tgz | tar -xvz -C /usr/local/cargo/bin"
 
 steps:
   prepare_repo:
