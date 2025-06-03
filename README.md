@@ -9,7 +9,7 @@ Usage:
 `cargo add invisible-characters`
 
 ```rust
-use invisible_characters::INVISIBLE_CHARS
+use invisible_characters::INVISIBLE_CHARS;
 
 if title.contains(INVISIBLE_CHARS) {...}
 ```
