@@ -1,4 +1,5 @@
 use anyhow::Result;
+use invisible_characters::convert_code_to_unicode_char;
 use serde::Deserialize;
 use std::{fs::File, io::Write};
 
@@ -9,14 +10,14 @@ fn main() -> Result<()> {
   let data = read_chars()?;
   let mut file = File::create(OUTPUT_FILE)?;
 
-  let import_line = "use crate::InvisibleChar;";
-  let var_line = format!(
-    "pub const INVISIBLE_CHARS: [InvisibleCharReader; {}] = ",
-    data.len()
-  );
+  let var_line = format!("pub const INVISIBLE_CHARS: [char; {}] = ", data.len());
 
-  let output_data =
-    format!("{import_line}\n{var_line}{data:#?};").replace("InvisibleCharReader", "InvisibleChar");
+  let converted_chars = data
+    .iter()
+    .map(|c| convert_code_to_unicode_char(&c.code))
+    .collect::<Vec<char>>();
+
+  let output_data = format!("{var_line}{converted_chars:#?};");
   write!(file, "{output_data}")?;
 
   Ok(())
