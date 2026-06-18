@@ -1,4 +1,4 @@
-pub const INVISIBLE_CHARS: [char; 70] = [
+pub const INVISIBLE_CHARS: [char; 75] = [
   '\t',
   '\n',
   '\u{b}',
@@ -11,6 +11,7 @@ pub const INVISIBLE_CHARS: [char; 70] = [
   '\u{61c}',
   'ᅟ',
   'ᅠ',
+  '\u{1680}',
   '\u{17b4}',
   '\u{17b5}',
   '\u{180e}',
@@ -50,6 +51,10 @@ pub const INVISIBLE_CHARS: [char; 70] = [
   '\u{feff}',
   'ﾠ',
   '￼',
+  '\u{fff9}',
+  '\u{fffa}',
+  '\u{fffb}',
+  '𝀀',
   '𝀀',
   '𝃰',
   '𝄀',
