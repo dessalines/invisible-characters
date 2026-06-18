@@ -13,7 +13,7 @@ steps:
       - event: [pull_request, tag]
 
   prettier_check:
-    image: tmknom/prettier:3.4.2
+    image: jauderho/prettier:3.7.4-alpine
     commands:
       - prettier -c . '!invisible-characters'
     when:
